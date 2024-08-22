@@ -1,4 +1,4 @@
-
+<?php $conn = mysqli_connect('localhost', 'root', '', 'gy')?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -41,10 +41,12 @@
                     <i class="fa-solid fa-right-to-bracket"></i>
                     <p>로그인</p>
                 </div>
-                <div class="join_btn">
-                    <i class="fa-solid fa-user-plus"></i>
-                    <p>회원가입</p>
-                </div>
+                <a href="join.php">
+                    <div class="join_btn">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <p>회원가입</p>
+                    </div>
+                </a>
             </div>
         </header>
     </div>

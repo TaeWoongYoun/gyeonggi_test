@@ -97,6 +97,6 @@
     </div>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="index.js"></script>
+    <script src="js/join.js"></script>
 </body>
 </html>

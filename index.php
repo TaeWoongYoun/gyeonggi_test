@@ -37,10 +37,12 @@
                 </ul>
             </nav>
             <div class="sgin_btn">
-                <div class="login_btn">
-                    <i class="fa-solid fa-right-to-bracket"></i>
-                    <p>로그인</p>
-                </div>
+                <a href="login.php">
+                    <div class="login_btn">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <p>로그인</p>
+                    </div>
+                </a>
                 <a href="join.php">
                     <div class="join_btn">
                         <i class="fa-solid fa-user-plus"></i>

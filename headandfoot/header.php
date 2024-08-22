@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
 </head>
 <body>
+    <?php $id = isset($_GET['id']) ? mysqli_real_escape_string($conn, $_GET['id']) : ''?>
     <!-- 헤더 영역 -->
     <div class="header_area">
         <header>
@@ -33,7 +34,7 @@
                         </ul>
                     </li>
                     <li><a href="#">굿즈SHOP</a></li>
-                    <li><a href="#">예약하기</a></li>
+                    <li><a href="reservation.php?id=<?= $id?>">예약하기</a></li>
                     <li><a href="#">마이페이지</a></li>
                 </ul>
             </nav>

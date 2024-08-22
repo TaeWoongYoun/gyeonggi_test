@@ -32,24 +32,49 @@
                             <li><a href="event.html">퀴즈 이벤트 참가</a></li>
                         </ul>
                     </li>
+                    <li><a href="#">굿즈SHOP</a></li>
                     <li><a href="#">예약하기</a></li>
                     <li><a href="#">마이페이지</a></li>
                 </ul>
             </nav>
-            <div class="sgin_btn">
-                <a href="login.php">
-                    <div class="login_btn">
-                        <i class="fa-solid fa-right-to-bracket"></i>
-                        <p>로그인</p>
-                    </div>
-                </a>
-                <a href="join.php">
-                    <div class="join_btn">
-                        <i class="fa-solid fa-user-plus"></i>
-                        <p>회원가입</p>
-                    </div>
-                </a>
-            </div>
+            <?php
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+                $sql = "SELECT * FROM user WHERE id = '$id'";
+                $result = mysqli_query($conn, $sql);
+                if ($row = mysqli_fetch_array($result)) {
+                    echo "
+                    <div class='sgin_btn'>
+                        <div class='login_btn'>
+                            <i class='fa-solid fa-user'></i>
+                            <p>{$row['name']}</p>
+                        </div>
+                        <a href='index.php'>
+                            <div class='join_btn'>
+                                <i class='fa-solid fa-door-closed'></i>
+                                <p>로그아웃</p>
+                            </div>
+                        </a>
+                    </div>";
+                }
+            } else {
+                echo "
+                <div class='sgin_btn'>
+                    <a href='login.php'>
+                        <div class='login_btn'>
+                            <i class='fa-solid fa-right-to-bracket'></i>
+                            <p>로그인</p>
+                        </div>
+                    </a>
+                    <a href='join.php'>
+                        <div class='join_btn'>
+                            <i class='fa-solid fa-user-plus'></i>
+                            <p>회원가입</p>
+                        </div>
+                    </a>
+                </div>";
+            }
+            ?>
         </header>
     </div>
     <!-- 헤더 영역 -->

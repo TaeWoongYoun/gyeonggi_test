@@ -5,17 +5,11 @@
     <div class="content">
     <?php
     if ($_GET['id'] == 'admin') {
-        echo '1';
+        require('./reservation/reservation_admin.php');
     } else if ($_GET['id'] == 'guide1' || $_GET['id'] == 'guide2') {
-        echo '2';
-    } else if ($_GET['id'] == '') {
-        echo "
-            <script>
-                alert('회원가입을 먼저 진행해주세요.');
-                location.href = 'join.php'
-            </script>";
+        require('./reservation/reservation.guide.php');
     } else {
-        echo "3";
+        require('./reservation/reservation_user.php');
     }
     ?>
     </div>

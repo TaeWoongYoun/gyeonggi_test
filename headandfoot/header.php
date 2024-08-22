@@ -34,8 +34,8 @@
                         </ul>
                     </li>
                     <li><a href="#">굿즈SHOP</a></li>
-                    <li><a href="reservation.php?id=<?= $id?>">예약하기</a></li>
-                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="reservation.php?id=<?=$id?>">예약하기</a></li>
+                    <li><a href="mypage.php?id=<?=$id?>">마이페이지</a></li>
                 </ul>
             </nav>
             <?php
